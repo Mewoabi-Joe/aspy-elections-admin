@@ -1,11 +1,11 @@
 {
   "name": "aspy-election",
-  "version": "0.1.0",
+  "version": "5.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next start",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
