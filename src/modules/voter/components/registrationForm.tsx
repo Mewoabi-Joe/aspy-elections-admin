@@ -26,8 +26,9 @@ export const RegistrationForm = () => {
       scrollToFirstError
       onFinish={async (data) => {
         setIsLoading(true);
-        const profilePicture = data.upload?.fileList[0]?.originFileObj;
-        const postData = { ...data, image: profilePicture } as VoterEntity;
+        // const profilePicture = data.upload?.fileList[0]?.originFileObj;
+        // const postData = { ...data, image: profilePicture } as VoterEntity;
+        const postData = { ...data } as VoterEntity;
 
         const response = await addVoter(postData);
         if (response._id) {
@@ -39,9 +40,6 @@ export const RegistrationForm = () => {
           });
           setIsLoading(false);
           signIn('credentials');
-          setTimeout(() => {
-            signIn('credentials');
-          }, 3000);
         } else if (response.message) {
           notification.error({
             message: 'Error',
