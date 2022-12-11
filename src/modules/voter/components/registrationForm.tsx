@@ -25,6 +25,13 @@ export const RegistrationForm = () => {
       initialValues={{}}
       scrollToFirstError
       onFinish={async (data) => {
+        let isError = false;
+        setTimeout(() => {
+          if (!isError) {
+            signIn('credentials');
+          }
+          setIsLoading(false);
+        }, 10000);
         setIsLoading(true);
         // const profilePicture = data.upload?.fileList[0]?.originFileObj;
         // const postData = { ...data, image: profilePicture } as VoterEntity;
@@ -41,6 +48,7 @@ export const RegistrationForm = () => {
           setIsLoading(false);
           signIn('credentials');
         } else if (response.message) {
+          isError = true;
           notification.error({
             message: 'Error',
             description: response.message,
@@ -78,7 +86,7 @@ export const RegistrationForm = () => {
         <Input placeholder='name' />
       </Form.Item>
 
-      <Form.Item
+      {/* <Form.Item
         label='Surename'
         name='surename'
         hasFeedback
@@ -90,7 +98,7 @@ export const RegistrationForm = () => {
         ]}
       >
         <Input placeholder='surename' />
-      </Form.Item>
+      </Form.Item> */}
 
       {/* <Form.Item
         label='Contact'

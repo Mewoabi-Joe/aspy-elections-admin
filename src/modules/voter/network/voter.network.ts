@@ -18,7 +18,7 @@ export const addVoter = (voterToCreate: VoterEntity) => {
   formData.append('level', voterToCreate.level);
   formData.append('password', voterToCreate.password as string);
   formData.append('secret_code', '1505');
-  formData.append('image', voterToCreate.image);
+  // formData.append('image', voterToCreate.image);
 
   return fetch(API_ROUTES.VOTERS.ADD, {
     method: 'post',
