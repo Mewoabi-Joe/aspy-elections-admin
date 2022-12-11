@@ -137,6 +137,22 @@ const MenuContent = ({
         Candidate list
       </NavLink>
       <NavLink
+        onClick={() => {
+          closeMenu?.();
+          router.push(ROUTES.VOTER.VOTING);
+        }}
+      >
+        Vote my candidates
+      </NavLink>
+      <NavLink
+        onClick={() => {
+          closeMenu?.();
+          router.push(ROUTES.ADMIN.RESULT_PAGE);
+        }}
+      >
+        See voting results
+      </NavLink>
+      <NavLink
         onClick={() => signOut({ callbackUrl: `${window.location.origin}/` })}
       >
         <Space>
