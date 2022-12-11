@@ -35,10 +35,13 @@ export const RegistrationForm = () => {
             message: 'Success',
             description:
               'Your have been registered as a voter. Login into your account',
-            duration: 10,
+            duration: 5,
           });
           setIsLoading(false);
           signIn('credentials');
+          setTimeout(() => {
+            signIn('credentials');
+          }, 3000);
         } else if (response.message) {
           notification.error({
             message: 'Error',
