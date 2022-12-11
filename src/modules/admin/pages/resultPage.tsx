@@ -78,7 +78,7 @@ export const ResultPage = () => {
                           votes.filter(
                             (vote) =>
                               vote.post == item.post._id &&
-                              vote.candidate == '----',
+                              vote.candidate == 'Empty-ballot',
                           ).length,
                         ),
                       backgroundColor: sampleSize(
@@ -128,7 +128,7 @@ export const ResultPage = () => {
                           votes.filter(
                             (vote) =>
                               vote.post == item.post._id &&
-                              vote.candidate == '----',
+                              vote.candidate == 'Empty-ballot',
                           ).length)) *
                         10000,
                     ) / 100}

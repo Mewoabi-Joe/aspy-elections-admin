@@ -29,7 +29,7 @@ class VotesService {
     }
     const resultVotes = await votesDbService.addMultipleVote(votes);
     for (let vote of votes) {
-      if (vote.candidate !== '----') {
+      if (vote.candidate !== 'Empty-ballot') {
         await candidateService.addNumberVotes(vote.candidate);
       }
     }

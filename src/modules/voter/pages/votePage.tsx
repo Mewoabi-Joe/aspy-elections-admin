@@ -99,8 +99,8 @@ export const VotePage = () => {
                     {candidate.name} {candidate.surename}
                   </Select.Option>
                 ))}
-              <Select.Option key='none' value='----'>
-                ----
+              <Select.Option key='none' value='Empty-ballot'>
+                Empty-ballot
               </Select.Option>
             </Select>
           </Form.Item>
