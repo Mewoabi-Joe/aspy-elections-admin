@@ -144,14 +144,14 @@ const MenuContent = ({
       >
         Vote my candidates
       </NavLink>
-      <NavLink
+      {/* <NavLink
         onClick={() => {
           closeMenu?.();
           router.push(ROUTES.ADMIN.RESULT_PAGE);
         }}
       >
         See voting results
-      </NavLink>
+      </NavLink> */}
       <NavLink
         onClick={() => signOut({ callbackUrl: `${window.location.origin}/` })}
       >
