@@ -26,6 +26,7 @@ export const AspianForm = ({
       scrollToFirstError
       onFinish={async (data: AspianEntity) => {
         setIsLoading(true);
+        data.matricule = data.matricule.toLowerCase();
         const response = await addAspian(data);
         if (response._id) {
           notification.success({
