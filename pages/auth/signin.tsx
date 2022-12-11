@@ -59,7 +59,7 @@ export default function SignIn({ csrfToken }: { csrfToken: string }) {
           onFinish={async (data) => {
             const { matricule, password } = data;
             signIn('credentials', {
-              matricule,
+              matricule: matricule.toLowerCase(),
               password,
               register: false,
               callbackUrl: `${window.location.origin}${ROUTES.VOTER.CANDIDATE_LIST}`,

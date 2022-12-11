@@ -13,7 +13,7 @@ export const addVoter = (voterToCreate: VoterEntity) => {
   formData.append('surename', voterToCreate.surename);
   formData.append('contact', voterToCreate.contact);
   formData.append('email', voterToCreate.email);
-  formData.append('matricule', voterToCreate.matricule);
+  formData.append('matricule', voterToCreate.matricule.toLowerCase());
   formData.append('department', voterToCreate.department);
   formData.append('level', voterToCreate.level);
   formData.append('password', voterToCreate.password as string);
