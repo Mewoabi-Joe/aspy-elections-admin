@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { UploadOutlined } from '@ant-design/icons';
-import { Button, Form, Input, notification, Select, Upload } from 'antd';
+import { Button, Form, Input, notification, Select } from 'antd';
 import { signIn } from 'next-auth/client';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -56,11 +55,11 @@ export const RegistrationForm = () => {
         }
       }}
     >
-      <Form.Item name='upload' label='Profile picture'>
+      {/* <Form.Item name='upload' label='Profile picture'>
         <Upload name='image' listType='picture'>
           <Button icon={<UploadOutlined />}>Load your profile picture</Button>
         </Upload>
-      </Form.Item>
+      </Form.Item> */}
       <Form.Item
         label='Name'
         name='name'
@@ -89,7 +88,7 @@ export const RegistrationForm = () => {
         <Input placeholder='surename' />
       </Form.Item>
 
-      <Form.Item
+      {/* <Form.Item
         label='Contact'
         name='contact'
         hasFeedback
@@ -101,9 +100,9 @@ export const RegistrationForm = () => {
         ]}
       >
         <Input placeholder='contact' />
-      </Form.Item>
+      </Form.Item> */}
 
-      <Form.Item
+      {/* <Form.Item
         label='Email'
         name='email'
         hasFeedback
@@ -116,7 +115,7 @@ export const RegistrationForm = () => {
         ]}
       >
         <Input placeholder='email' />
-      </Form.Item>
+      </Form.Item> */}
 
       <Form.Item
         label='Matricule'
