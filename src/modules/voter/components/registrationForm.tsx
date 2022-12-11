@@ -44,8 +44,9 @@ export const RegistrationForm = () => {
           notification.error({
             message: 'Error',
             description: response.message,
-            duration: null,
+            duration: 5,
           });
+          console.log('in middle one');
           setIsLoading(false);
         } else {
           notification.error({
@@ -53,6 +54,8 @@ export const RegistrationForm = () => {
             description: 'Sorry!!! An error has occured. Try again once more..',
             duration: 10,
           });
+          console.log('in last one');
+          setIsLoading(false);
         }
       }}
     >
