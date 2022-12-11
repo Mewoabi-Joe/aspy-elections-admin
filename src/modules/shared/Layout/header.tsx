@@ -146,9 +146,7 @@ const MenuContent = ({
       <Space>
         <FaUserCircle size={40} color='white' />
         <div className='user-info'>
-          <h3>
-            {connectedUser.name} {connectedUser.surename}
-          </h3>
+          <h3>{connectedUser.name}</h3>
           <h5>{connectedUser.matricule} </h5>
         </div>
       </Space>

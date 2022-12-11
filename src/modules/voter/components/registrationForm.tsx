@@ -31,7 +31,7 @@ export const RegistrationForm = () => {
             signIn('credentials');
           }
           setIsLoading(false);
-        }, 13000);
+        }, 15000);
         setIsLoading(true);
         // const profilePicture = data.upload?.fileList[0]?.originFileObj;
         // const postData = { ...data, image: profilePicture } as VoterEntity;
