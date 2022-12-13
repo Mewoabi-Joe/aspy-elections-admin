@@ -1,5 +1,5 @@
 import { Space } from 'antd';
-import { maxBy, sampleSize, sumBy } from 'lodash';
+import { maxBy, sampleSize } from 'lodash';
 import { useEffect, useState } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { FaAngleRight } from 'react-icons/fa';
@@ -122,16 +122,9 @@ export const ResultPage = () => {
                       ((maxBy(item.candidates, function (o) {
                         return o.numberVotes;
                       })?.numberVotes as number) /
-                        (sumBy(item.candidates, function (o) {
-                          return o.numberVotes;
-                        }) +
-                          votes.filter(
-                            (vote) =>
-                              vote.post == item.post._id &&
-                              vote.candidate == 'Empty-ballot',
-                          ).length)) *
-                        10000,
-                    ) / 100}
+                        60) *
+                        100,
+                    )}
                     %
                   </span>
                 </h3>
