@@ -122,7 +122,7 @@ export const ResultPage = () => {
                       ((maxBy(item.candidates, function (o) {
                         return o.numberVotes;
                       })?.numberVotes as number) /
-                        60) *
+                        70) *
                         100,
                     )}
                     %
